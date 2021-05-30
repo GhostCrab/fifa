@@ -3,6 +3,7 @@
 from team import Team
 from record import Record
 from game import Game
+from superRecord import SuperRecord
 
 import argparse
 
@@ -230,30 +231,40 @@ if __name__ == "__main__":
     if args.debug:
         print("Debug")
 
-    runs = 10023
+    teams = Team.all_teams()
+    super_records = {}
+    for team in teams:
+        super_records[team.name] = SuperRecord(team)
+
+    runs = 50000
     for i in range(runs):
         print("%.2f%%" % (i/runs*100), end='\r')
         all_games = simulate_tournament()
 
-    teams = Team.all_teams()
-    records = {}
-    for team in teams:
-        records[team.name] = Record(team)
-    
-    for game in all_games:
-        for team in game.teams:
-            records[team.name].add(game)
+        records = {}
+        for team in teams:
+            records[team.name] = Record(team)
 
-    sorted_records = sorted(list(records.values()))
+        for game in all_games:
+            for team in game.teams:
+                records[team.name].add(game)
 
-    final_records = {"A": [], "B": [], "C": [], "D": [], "E": [], "F": [], "X": []}
+        for team in teams:
+            super_records[team.name].collect(records[team.name])
+
+    sorted_records = sorted(list(super_records.values()))
 
     for record in sorted_records:
-        group = record.team.group
-        final_records[group].append(record.team)
+        print(record)
 
-    print("Results: ")
-    for group in ["A", "B", "C", "D", "E", "F"]:
-        print("  Group %s: " % (group))
-        for team in final_records[group]:
-            print(records[team.name])
+    # final_records = {"A": [], "B": [], "C": [], "D": [], "E": [], "F": [], "X": []}
+
+    # for record in sorted_records:
+    #     group = record.team.group
+    #     final_records[group].append(record.team)
+
+    # print("Results: ")
+    # for group in ["A", "B", "C", "D", "E", "F"]:
+    #     print("  Group %s: " % (group))
+    #     for team in final_records[group]:
+    #         print(records[team.name])

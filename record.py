@@ -123,7 +123,6 @@ class Record():
 
         return wd
 
-    
     def add(self, game):
         stat = game.stat(self.team)
         if stat is None:
@@ -139,7 +138,7 @@ class Record():
 
         if win:
             self.total_wins += 1
-            
+
             if game.stage == 0:
                 self.group_wins += 1
             else:
@@ -147,6 +146,7 @@ class Record():
 
             if game.stage == 4:
                 self.champ = True
+                self.eliminated = 5
 
             if pk:
                 self.pk_wins += 1
