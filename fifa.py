@@ -3,10 +3,22 @@
 from team import Team
 from record import Record
 from game import Game
+from draft import Draft
 from superRecord import SuperRecord
 
 import argparse
+import numpy as np
+import random
 
+def simulate_draft(drafts, teams):
+    draft_teams = teams.copy()
+    for i in [0,1,2,3,4,5,5,4,3,2,1,0,0,1,2,3,4,5,5,4,3,2,1,0]:
+        pick_index = round(abs(np.random.normal(0, 2)))
+        if pick_index >= len(draft_teams):
+            pick_index = len(draft_teams) - 1
+
+        #print("%s drafting #%d (%s)" % (drafts[i].player, pick_index, draft_teams[pick_index]))
+        drafts[i].add_team(draft_teams.pop(pick_index))
 
 def simulate_group(group):
     teams = Team.group(group)
@@ -236,9 +248,9 @@ if __name__ == "__main__":
     for team in teams:
         super_records[team.name] = SuperRecord(team)
 
-    runs = 50000
+    runs = 100000
     for i in range(runs):
-        print("%.2f%%" % (i/runs*100), end='\r')
+        print("Tournament Simulation: %.2f%%" % (i/runs*100), end='\r')
         all_games = simulate_tournament()
 
         records = {}
@@ -256,6 +268,45 @@ if __name__ == "__main__":
 
     for record in sorted_records:
         print(record)
+
+    sorted_teams = sorted(teams)
+    for index, team in enumerate(sorted_teams):
+        print("%2d %s [%5.2f]" % (index+1, team, super_records[team.name].points(0)["mean"]))
+
+    player_ranks = [[],[],[],[],[],[]]
+
+    draft_runs = 1
+    for i in range(draft_runs):
+        print("Draft Simulation: %.2f%%" % (i/draft_runs*100), end='\r')
+        drafts = [
+            Draft(0),
+            Draft(1),
+            Draft(2),
+            Draft(3),
+            Draft(4),
+            Draft(5)
+        ]
+
+        simulate_draft(drafts, sorted_teams)
+        for draft in drafts:
+            draft.add_records(super_records.values())
+
+        sorted_drafts = sorted(drafts)
+        for i, draft in enumerate(sorted_drafts):
+            player_ranks[draft.player].append(i)
+            #print(draft)
+
+    for player, ranks in enumerate(player_ranks):
+        print("Player %d: %.2f %.2f %.2f %.2f %.2f %.2f %.2f" % (
+            player,
+            np.mean(ranks),
+            ranks.count(0) / draft_runs,
+            ranks.count(1) / draft_runs,
+            ranks.count(2) / draft_runs,
+            ranks.count(3) / draft_runs,
+            ranks.count(4) / draft_runs,
+            ranks.count(5) / draft_runs,
+        ))
 
     # final_records = {"A": [], "B": [], "C": [], "D": [], "E": [], "F": [], "X": []}
 

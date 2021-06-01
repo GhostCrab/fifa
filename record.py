@@ -15,6 +15,7 @@ class Record():
         self.champ = False
         self.goals_scored = 0
         self.goals_allowed = 0
+        self.pts = 0
 
     @property
     def goal_differential(self):
@@ -27,7 +28,7 @@ class Record():
 
         group_string = ""
         for stat in group_stats:
-            (win, pk, gs, ga, ot) = stat
+            (win, pk, pts, gs, ga, ot) = stat
             if pk:
                 group_string += "%s %d-%d [%s-PK]; " % (ot.name, gs, ga, "W" if win else "L")
             else:
@@ -40,7 +41,7 @@ class Record():
 
         elim_string = ""
         for stat in elim_stats:
-            (win, pk, gs, ga, ot) = stat
+            (win, pk, pts, gs, ga, ot) = stat
             if pk:
                 elim_string += "%s %d-%d [%s-PK]; " % (ot.name, gs, ga, "W" if win else "L")
             else:
@@ -50,27 +51,28 @@ class Record():
         if self.champ:
             champ_string = " *CHAMP*"
 
-        return "    %s (%d)%s:\n      Record: %d-%d [PKs: %d-%d]\n      Group: %d-%d - %s\n      Eliminated: %s - %s\n      Goals: %d-%d [%d]" % (
+        return "    %s (%d)%s:\n      Record: %d-%d [PKs: %d-%d]\n      Group: %d-%d - %s\n      Eliminated: %s - %s\n      Goals: %d-%d [%d]\n      Points: %d %d %d %d" % (
             self.team.name, self.team.odds, champ_string,
             self.total_wins, self.total_losses,
             self.pk_wins, self.pk_losses,
             self.group_wins, self.group_losses, group_string,
             self.eliminated if not self.champ else "--", elim_string,
-            self.goals_scored, self.goals_allowed, self.goal_differential
+            self.goals_scored, self.goals_allowed, self.goal_differential,
+            self.points(0), self.points(1), self.points(2), self.points(3)
         )
 
     def __lt__(self, other):
         #print("Comparing %s < %s" % (self.team, other.team))
-        if self.total_wins > other.total_wins:
+        if self.pts > other.pts:
             return True
-        elif self.total_wins < other.total_wins:
+        elif self.pts < other.pts:
             return False
 
-        wde = self.win_differential_exclusive(other)
-        if self.win_differential_exclusive(other) > 0:
-            return True
-        elif self.win_differential_exclusive(other) < 0:
-            return False
+        # wde = self.win_differential_exclusive(other)
+        # if self.win_differential_exclusive(other) > 0:
+        #     return True
+        # elif self.win_differential_exclusive(other) < 0:
+        #     return False
 
         gde = self.goal_differential_exclusive(other)
         if gde > 0:
@@ -105,7 +107,7 @@ class Record():
         for game in self.games:
             stat = game.stat(team)
             if stat is not None:
-                (win, pk, gs, ga, ot) = stat
+                (win, pk, pts, gs, ga, ot) = stat
                 if stat[0]:
                     gd += ga - gs
 
@@ -131,10 +133,11 @@ class Record():
 
         self.games.append(game)
 
-        (win, pk, gs, ga, ot) = stat
+        (win, pk, pts, gs, ga, ot) = stat
 
         self.goals_scored += gs
         self.goals_allowed += ga
+        self.pts += pts
 
         if win:
             self.total_wins += 1
@@ -161,3 +164,15 @@ class Record():
 
             if pk:
                 self.pk_losses += 1
+
+    def points(self, points_type):
+        if points_type == 1: # 3 points for a win, 1 point for a draw in group
+            return self.pts
+        if points_type == 0: # 3 points for a win, +1 if champ win, +1 to make it past elimination
+            return (self.pts) + (1 if self.champ else 0) + (1 if self.eliminated > 0 else 0)
+        if points_type == 2: # win = 3, pk win = 2, pk loss = 1
+            clean_wins = self.total_wins - self.pk_wins
+            return self.pts + (self.pk_wins * -1) + (self.pk_losses)
+        if points_type == 3: # win = 3, pk win = 2, pk loss = 1, +1 for champ win, +1 to make it past elimination
+            clean_wins = self.total_wins - self.pk_wins
+            return self.pts + (self.pk_wins * -1) + (self.pk_losses) + (1 if self.champ else 0) + (1 if self.eliminated > 0 else 0)

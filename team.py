@@ -17,13 +17,25 @@ class Team():
         self.log_odds = None
 
     def __str__(self):
-        return "(%02d) %s %s %d %.2f" % (self.team_id, self.name, self.group, self.odds, self.log_odds)
+        return "(%02d) %10s %s %5d %.2f" % (self.team_id, self.name, self.group, self.odds, self.log_odds)
 
     def __eq__(self, other):
         o = Team.from_ambig(other)
         if o is not None:
             return self.team_id == o.team_id
         return NotImplemented
+
+    def __lt__(self, other):
+        #print("Comparing %s < %s" % (self.team, other.team))
+        if self.odds < other.odds:
+            return True
+        elif self.odds > other.odds:
+            return False
+
+        if self.team_id < other.team_id:
+            return True
+
+        return False
 
     def encode(self):
         return {

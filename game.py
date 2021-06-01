@@ -53,14 +53,27 @@ class Game():
     def winner(self):
         if self._winner is None:
             score = self.score
-            if score[0] == score[1]:
+            if score[0] == score[1] and self.stage > 0:
                 self._winner = self.teams[random.randint(0,1)]
             elif score[0] > score[1]:
                 self._winner = self.teams[0]
-            else:
+            elif score[0] < score[1]:
                 self._winner = self.teams[1]
 
         return self._winner
+
+    def points(self, team):
+        if team not in self.teams:
+            return None
+
+        if self.winner == team:
+            return 3
+
+        if self.winner is None:
+            return 1
+
+        return 0
+
 
     def stat(self, team):
         if team not in self.teams:
@@ -70,6 +83,6 @@ class Game():
         win = self.winner == team
         pk = self.score[0] == self.score[1]
         if team == self.teams[0]:
-            return (win, pk, self.score[0], self.score[1], self.teams[1])
+            return (win, pk, self.points(team), self.score[0], self.score[1], self.teams[1])
         if team == self.teams[1]:
-            return (win, pk, self.score[1], self.score[0], self.teams[0])
+            return (win, pk, self.points(team), self.score[1], self.score[0], self.teams[0])
