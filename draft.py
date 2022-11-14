@@ -26,8 +26,9 @@ class Draft():
 
     def __str__(self):
 
-        return ("Player %d: %.2f %.2f %.2f %.2f [%10s, %10s, %10s, %10s]" % (
+        return ("Player %d [%f]: %.2f %.2f %.2f %.2f [%10s, %10s, %10s, %10s]" % (
             self.player,
+            self.score(0) + self.score(1) + self.score(2) + self.score(3),
             self.score(0), self.score(1), self.score(2), self.score(3),
             self.teams[0].name,
             self.teams[1].name,

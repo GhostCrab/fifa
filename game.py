@@ -27,7 +27,7 @@ class Game():
         return "%10s: %d %10s: %d   Winner: %-10s" % (
             self.teams[0].name, self.score[0], 
             self.teams[1].name, self.score[1], 
-            self.winner.name
+            self.winner.name if self.winner else "NONE"
         )
 
     @property

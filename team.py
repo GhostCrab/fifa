@@ -15,6 +15,7 @@ class Team():
         self.group = None
         self.odds = None
         self.log_odds = None
+        self.value = None
 
     def __str__(self):
         return "(%02d) %10s %s %5d %.2f" % (self.team_id, self.name, self.group, self.odds, self.log_odds)
@@ -27,6 +28,12 @@ class Team():
 
     def __lt__(self, other):
         #print("Comparing %s < %s" % (self.team, other.team))
+        if self.value is not None and other.value is not None:
+            if self.value > other.value:
+                return True
+            elif self.value < other.value:
+                return False
+
         if self.odds < other.odds:
             return True
         elif self.odds > other.odds:
@@ -104,30 +111,38 @@ class Team():
         Team.abbr_dict = {}
 
         rows = [
-            ( 0, "Italy", "A", 1200),
-            ( 1, "SLand", "A", 7000),
-            ( 2, "Turkey", "A", 5000),
-            ( 3, "Wales", "A", 10000),
-            ( 4, "Belgium", "B", 600),
-            ( 5, "Russia", "B", 10000),
-            ( 6, "Denmark", "B", 2500),
-            ( 7, "Finland", "B", 50000),
-            ( 8, "Ukraine", "C", 10000),
-            ( 9, "NLands", "C", 1100),
-            (10, "Austria", "C", 10000),
-            (11, "NMac", "C", 50000),
-            (12, "England", "D", 550),
-            (13, "Croatia", "D", 4000),
-            (14, "CRep", "D", 15000),
-            (15, "Scotland", "D", 30000),
-            (16, "Spain", "E", 900),
-            (17, "Poland", "E", 8000),
-            (18, "Sweden", "E", 7500),
-            (19, "Slovakia", "E", 30000),
-            (20, "Germany", "F", 900),
-            (21, "France", "F", 500),
-            (22, "Portugal", "F", 800),
-            (23, "Hungary", "F", 50000)
+            ( 0, "Qatar", "A", 25000),
+            ( 1, "Ecuador", "A", 15000),
+            ( 2, "Senegal", "A", 12500),
+            ( 3, "Netherlands", "A", 1200),
+            ( 4, "England", "B", 800),
+            ( 5, "Iran", "B", 50000),
+            ( 6, "USA", "B", 15000),
+            ( 7, "Wales", "B", 20000),
+            ( 8, "Argentina", "C", 550),
+            ( 9, "Saudi Arabia", "C", 75000),
+            (10, "Mexico", "C", 15000),
+            (11, "Poland", "C", 15000),
+            (12, "France", "D", 600),
+            (13, "Austrlia", "D", 35000),
+            (14, "Denmark", "D", 2800),
+            (15, "Tunisia", "D", 50000),
+            (16, "Spain", "E", 850),
+            (17, "Costa Rica", "E", 75000),
+            (18, "Germany", "E", 1000),
+            (19, "Japan", "E", 25000),
+            (20, "Belgium", "F", 1600),
+            (21, "Canada", "F", 20000),
+            (22, "Morocco", "F", 20000),
+            (23, "Croatia", "F", 5000),
+            (24, "Brazil", "G", 400),
+            (25, "Serbia", "G", 8000),
+            (26, "Switzerland", "G", 10000),
+            (27, "Cameroon", "G", 25000),
+            (28, "Portugal", "H", 1400),
+            (29, "Ghana", "H", 25000),
+            (30, "Uruguay", "H", 5000),
+            (31, "Korea", "H", 25000),
         ]
 
         for row in rows:

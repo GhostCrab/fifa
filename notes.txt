@@ -1,0 +1,201 @@
+##### 4 Picks
+    Brazil (400) 15.88 14.64 14.94 16.19:
+      Record: 4.78-1.07 [PKs: 0.46-0.77]
+      Group: 2.68-0.32
+      Eliminated: Eliminated in round 0: 0.13 1: 12.78 2: 26.86 3:22.27 4:13.46 C:24.50
+      Goals: 9.58-3.08 [6.50]
+    France (600) 14.90 13.73 14.17 15.34:
+      Record: 4.44-1.32 [PKs: 0.42-0.85]
+      Group: 2.51-0.49
+      Eliminated: Eliminated in round 0: 0.11 1: 11.49 2: 35.29 3:19.45 4:16.35 C:17.30
+      Goals: 9.21-3.07 [6.14]
+    Argentina (550) 14.76 13.61 13.84 15.00:
+      Record: 4.46-1.08 [PKs: 0.47-0.70]
+      Group: 2.76-0.24
+      Eliminated: Eliminated in round 0: 0.05 1: 24.97 2: 23.06 3:24.84 4:11.20 C:15.88
+      Goals: 9.22-2.97 [6.25]
+    England (800) 14.61 13.49 13.80 14.92:
+      Record: 4.39-1.20 [PKs: 0.41-0.72]
+      Group: 2.67-0.33
+      Eliminated: Eliminated in round 0: 0.13 1: 11.05 2: 44.13 3:18.32 4:14.24 C:12.13
+      Goals: 8.95-3.10 [5.85]
+    Netherlands (1200) 12.94 11.89 12.49 13.53:
+      Record: 3.76-1.57 [PKs: 0.38-0.97]
+      Group: 2.36-0.64
+      Eliminated: Eliminated in round 0: 0.89 1: 13.69 2: 49.83 3:21.85 4:7.86 C:5.88
+      Goals: 7.50-3.20 [4.30]
+    Spain (850) 12.35 11.27 11.82 12.90:
+      Record: 3.57-1.72 [PKs: 0.43-0.98]
+      Group: 2.19-0.81
+      Eliminated: Eliminated in round 0: 0.65 1: 25.87 2: 35.89 3:18.99 4:9.92 C:8.68
+      Goals: 7.22-3.01 [4.21]
+    Portugal (1400) 11.96 10.93 11.63 12.66:
+      Record: 3.41-1.75 [PKs: 0.40-1.10]
+      Group: 2.19-0.81
+      Eliminated: Eliminated in round 0: 1.58 1: 27.36 2: 37.66 3:20.51 4:8.34 C:4.55
+      Goals: 6.58-3.05 [3.53]
+    Germany (1000) 11.76 10.70 11.27 12.33:
+      Record: 3.37-1.82 [PKs: 0.42-1.00]
+      Group: 2.10-0.90
+      Eliminated: Eliminated in round 0: 0.95 1: 30.34 2: 33.08 3:19.52 4:9.10 C:7.01
+      Goals: 6.80-3.05 [3.75]
+    Belgium (1600) 10.04 9.04 9.86 10.85:
+      Record: 2.74-1.89 [PKs: 0.34-1.15]
+      Group: 2.05-0.95
+      Eliminated: Eliminated in round 0: 3.04 1: 58.15 2: 18.56 3:12.77 4:4.86 C:2.62
+      Goals: 5.30-2.85 [2.45]
+    Denmark (2800) 7.98 7.02 7.75 8.71:
+      Record: 2.10-2.28 [PKs: 0.25-0.97]
+      Group: 1.66-1.34
+      Eliminated: Eliminated in round 0: 4.95 1: 66.62 2: 17.30 3:7.89 4:2.32 C:0.93
+      Goals: 4.81-3.77 [1.04]
+    Uruguay (5000) 6.45 5.64 6.71 7.52:
+      Record: 1.52-2.52 [PKs: 0.14-1.22]
+      Group: 1.28-1.72
+      Eliminated: Eliminated in round 0: 19.27 1: 62.79 2: 13.12 3:3.82 4:0.80 C:0.21
+      Goals: 3.61-3.57 [0.04]
+    Croatia (5000) 6.17 5.40 6.54 7.30:
+      Record: 1.42-2.55 [PKs: 0.16-1.29]
+      Group: 1.21-1.79
+      Eliminated: Eliminated in round 0: 23.79 1: 59.35 2: 13.21 3:2.87 4:0.61 C:0.18
+      Goals: 3.33-3.35 [-0.02]
+    Serbia (8000) 4.51 3.99 4.95 5.48:
+      Record: 1.01-2.68 [PKs: 0.11-1.08]
+      Group: 0.84-2.16
+      Eliminated: Eliminated in round 0: 47.85 1: 39.01 2: 10.50 3:2.23 4:0.35 C:0.06
+      Goals: 2.58-3.77 [-1.19]
+    USA (15000) 4.41 3.87 4.83 5.37:
+      Record: 0.97-2.67 [PKs: 0.07-1.03]
+      Group: 0.88-2.12
+      Eliminated: Eliminated in round 0: 45.72 1: 46.00 2: 7.49 3:0.73 4:0.06 C:0.01
+      Goals: 2.60-3.90 [-1.29]
+    Mexico (15000) 4.19 3.69 4.57 5.06:
+      Record: 0.94-2.60 [PKs: 0.04-0.91]
+      Group: 0.89-2.11
+      Eliminated: Eliminated in round 0: 50.73 1: 45.13 2: 3.59 3:0.48 4:0.07 C:0.00
+      Goals: 2.61-4.06 [-1.46]
+    Poland (15000) 4.14 3.68 4.56 5.02:
+      Record: 0.93-2.57 [PKs: 0.04-0.91]
+      Group: 0.89-2.11
+      Eliminated: Eliminated in round 0: 53.75 1: 42.40 2: 3.36 3:0.42 4:0.07 C:0.00
+      Goals: 2.59-4.00 [-1.41]
+    Senegal (12500) 4.10 3.62 4.71 5.18:
+      Record: 0.85-2.71 [PKs: 0.05-1.14]
+      Group: 0.77-2.23
+      Eliminated: Eliminated in round 0: 52.14 1: 41.10 2: 5.97 3:0.65 4:0.12 C:0.02
+      Goals: 2.31-3.55 [-1.25]
+    Switzerland (10000) 3.77 3.40 4.35 4.72:
+      Record: 0.81-2.66 [PKs: 0.07-1.03]
+      Group: 0.71-2.29
+      Eliminated: Eliminated in round 0: 62.36 1: 29.04 2: 7.13 3:1.26 4:0.18 C:0.02
+      Goals: 2.27-3.76 [-1.49]
+    Wales (20000) 3.56 3.20 4.15 4.51:
+      Record: 0.75-2.66 [PKs: 0.04-0.99]
+      Group: 0.70-2.30
+      Eliminated: Eliminated in round 0: 63.77 1: 31.72 2: 4.19 3:0.31 4:0.01 C:0.00
+      Goals: 2.23-3.85 [-1.62]
+    Ecuador (15000) 3.54 3.18 4.24 4.60:
+      Record: 0.71-2.70 [PKs: 0.04-1.10]
+      Group: 0.66-2.34
+      Eliminated: Eliminated in round 0: 63.99 1: 31.53 2: 3.97 3:0.43 4:0.07 C:0.01
+      Goals: 2.06-3.52 [-1.45]
+    Canada (20000) 2.32 2.18 3.18 3.32:
+      Record: 0.39-2.76 [PKs: 0.01-1.01]
+      Group: 0.38-2.62
+      Eliminated: Eliminated in round 0: 86.24 1: 12.78 2: 0.91 3:0.06 4:0.00 C:0.00
+      Goals: 1.69-3.63 [-1.94]
+    Morocco (20000) 2.31 2.18 3.18 3.31:
+      Record: 0.39-2.75 [PKs: 0.01-1.01]
+      Group: 0.38-2.62
+      Eliminated: Eliminated in round 0: 86.93 1: 12.10 2: 0.89 3:0.07 4:0.01 C:0.00
+      Goals: 1.68-3.61 [-1.93]
+    Qatar (25000) 2.26 2.09 3.07 3.24:
+      Record: 0.37-2.81 [PKs: 0.01-0.99]
+      Group: 0.36-2.64
+      Eliminated: Eliminated in round 0: 82.98 1: 15.76 2: 1.18 3:0.08 4:0.01 C:0.00
+      Goals: 1.69-3.84 [-2.15]
+    Japan (25000) 2.16 2.15 2.76 2.78:
+      Record: 0.51-2.51 [PKs: 0.00-0.62]
+      Group: 0.51-2.49
+      Eliminated: Eliminated in round 0: 98.52 1: 1.29 2: 0.17 3:0.02 4:0.00 C:0.00
+      Goals: 2.08-4.50 [-2.43]
+    Korea (25000) 2.11 2.01 2.94 3.04:
+      Record: 0.36-2.75 [PKs: 0.00-0.93]
+      Group: 0.35-2.65
+      Eliminated: Eliminated in round 0: 89.67 1: 9.85 2: 0.43 3:0.04 4:0.00 C:0.00
+      Goals: 1.66-3.84 [-2.17]
+    Ghana (25000) 2.11 2.01 2.94 3.04:
+      Record: 0.36-2.75 [PKs: 0.00-0.93]
+      Group: 0.35-2.65
+      Eliminated: Eliminated in round 0: 89.48 1: 10.01 2: 0.48 3:0.03 4:0.00 C:0.00
+      Goals: 1.67-3.84 [-2.17]
+    Austrlia (35000) 1.84 1.81 2.49 2.52:
+      Record: 0.38-2.66 [PKs: 0.00-0.68]
+      Group: 0.37-2.63
+      Eliminated: Eliminated in round 0: 96.69 1: 3.20 2: 0.10 3:0.01 4:0.00 C:0.00
+      Goals: 1.77-4.57 [-2.80]
+    Cameroon (25000) 1.67 1.57 2.42 2.52:
+      Record: 0.24-2.87 [PKs: 0.01-0.86]
+      Group: 0.23-2.77
+      Eliminated: Eliminated in round 0: 89.66 1: 9.16 2: 1.10 3:0.09 4:0.00 C:0.00
+      Goals: 1.64-4.52 [-2.87]
+    Iran (50000) 1.60 1.51 2.34 2.44:
+      Record: 0.23-2.88 [PKs: 0.00-0.84]
+      Group: 0.22-2.78
+      Eliminated: Eliminated in round 0: 90.39 1: 9.13 2: 0.47 3:0.01 4:0.00 C:0.00
+      Goals: 1.62-4.56 [-2.93]
+    Tunisia (50000) 1.32 1.30 1.92 1.93:
+      Record: 0.23-2.79 [PKs: 0.00-0.61]
+      Group: 0.23-2.77
+      Eliminated: Eliminated in round 0: 98.24 1: 1.72 2: 0.03 3:0.00 4:0.00 C:0.00
+      Goals: 1.60-5.01 [-3.41]
+    Saudi Arabia (75000) 1.09 1.05 1.76 1.80:
+      Record: 0.11-2.93 [PKs: 0.00-0.71]
+      Group: 0.11-2.89
+      Eliminated: Eliminated in round 0: 95.47 1: 4.47 2: 0.06 3:0.00 4:0.00 C:0.00
+      Goals: 1.60-5.27 [-3.68]
+    Costa Rica (75000) 0.77 0.77 1.23 1.23:
+      Record: 0.11-2.89 [PKs: 0.00-0.45]
+      Group: 0.11-2.89
+      Eliminated: Eliminated in round 0: 99.88 1: 0.11 2: 0.01 3:0.00 4:0.00 C:0.00
+      Goals: 1.57-5.93 [-4.36]
+ 1 (24)     Brazil G   400 2.60 [15.88]
+ 2 (12)     France D   600 2.78 [14.90]
+ 3 (08)  Argentina C   550 2.74 [14.76]
+ 4 (04)    England B   800 2.90 [14.61]
+ 5 (03) Netherlands A  1200 3.08 [12.94]
+ 6 (16)      Spain E   850 2.93 [12.35]
+ 7 (28)   Portugal H  1400 3.15 [11.96]
+ 8 (18)    Germany E  1000 3.00 [11.76]
+ 9 (20)    Belgium F  1600 3.20 [10.04]
+10 (14)    Denmark D  2800 3.45 [ 7.98]
+11 (30)    Uruguay H  5000 3.70 [ 6.45]
+12 (23)    Croatia F  5000 3.70 [ 6.17]
+13 (25)     Serbia G  8000 3.90 [ 4.51]
+14 (06)        USA B 15000 4.18 [ 4.41]
+15 (10)     Mexico C 15000 4.18 [ 4.19]
+16 (11)     Poland C 15000 4.18 [ 4.14]
+17 (02)    Senegal A 12500 4.10 [ 4.10]
+18 (26) Switzerland G 10000 4.00 [ 3.77]
+19 (07)      Wales B 20000 4.30 [ 3.56]
+20 (01)    Ecuador A 15000 4.18 [ 3.54]
+21 (21)     Canada F 20000 4.30 [ 2.32]
+22 (22)    Morocco F 20000 4.30 [ 2.31]
+23 (00)      Qatar A 25000 4.40 [ 2.26]
+24 (19)      Japan E 25000 4.40 [ 2.16]
+25 (31)      Korea H 25000 4.40 [ 2.11]
+26 (29)      Ghana H 25000 4.40 [ 2.11]
+27 (13)   Austrlia D 35000 4.54 [ 1.84]
+28 (27)   Cameroon G 25000 4.40 [ 1.67]
+29 (05)       Iran B 50000 4.70 [ 1.60]
+30 (15)    Tunisia D 50000 4.70 [ 1.32]
+31 (09) Saudi Arabia C 75000 4.88 [ 1.09]
+32 (17) Costa Rica E 75000 4.88 [ 0.77]
+Player 0: 3.09 0.14 0.11 0.11 0.10 0.24 0.30
+Player 1: 2.77 0.14 0.12 0.15 0.16 0.28 0.15
+Player 2: 2.87 0.16 0.08 0.13 0.22 0.18 0.23
+Player 3: 2.17 0.22 0.17 0.21 0.15 0.12 0.13
+Player 4: 2.21 0.17 0.21 0.21 0.20 0.07 0.14
+Player 5: 1.89 0.17 0.31 0.19 0.17 0.11 0.05
+############################################################
+
