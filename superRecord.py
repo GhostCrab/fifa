@@ -11,6 +11,7 @@ class SuperRecord():
         self._pk_losses = []
         self._group_wins = []
         self._group_losses = []
+        self._group_ties = []
         self._elim_wins = []
         self.eliminated = [0, 0, 0, 0, 0, 0]
         self._goals_scored = []
@@ -46,6 +47,10 @@ class SuperRecord():
         return {"mean": np.mean(self._group_losses), "std": np.std(self._group_losses), "var": np.var(self._group_losses)}
 
     @property
+    def group_ties(self):
+        return {"mean": np.mean(self._group_ties), "std": np.std(self._group_ties), "var": np.var(self._group_ties)}
+
+    @property
     def elim_wins(self):
         return {"mean": np.mean(self._elim_wins), "std": np.std(self._elim_wins), "var": np.var(self._elim_wins)}
 
@@ -72,12 +77,12 @@ class SuperRecord():
         return estr
 
     def __str__(self):
-        return "    %s (%d) %.2f %.2f %.2f %.2f:\n      Record: %.2f-%.2f [PKs: %.2f-%.2f]\n      Group: %.2f-%.2f\n      Eliminated: %s\n      Goals: %.2f-%.2f [%.2f]" % (
+        return "    %s (%d) %.2f %.2f %.2f %.2f:\n      Record: %.2f-%.2f-%.2f [PKs: %.2f-%.2f]\n      Group: %.2f-%.2f-%.2f\n      Eliminated: %s\n      Goals: %.2f-%.2f [%.2f]" % (
             self.team.name, self.team.odds, 
             self.points(0)["mean"], self.points(1)["mean"], self.points(2)["mean"], self.points(3)["mean"],
-            self.total_wins["mean"], self.total_losses["mean"],
+            self.total_wins["mean"], self.total_losses["mean"], self.group_ties["mean"],
             self.pk_wins["mean"], self.pk_losses["mean"],
-            self.group_wins["mean"], self.group_losses["mean"],
+            self.group_wins["mean"], self.group_losses["mean"], self.group_ties["mean"],
             self.elim_str,
             self.goals_scored["mean"], self.goals_allowed["mean"], self.goal_differential
         )
@@ -130,6 +135,7 @@ class SuperRecord():
         self._pk_losses.append(record.pk_losses)
         self._group_wins.append(record.group_wins)
         self._group_losses.append(record.group_losses)
+        self._group_ties.append(record.group_ties)
         self._elim_wins.append(record.elim_wins)
         self.eliminated[record.eliminated] += 1
         self._goals_scored.append(record.goals_scored)

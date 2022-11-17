@@ -4,15 +4,22 @@ import random
 import numpy as np
 
 class Game():
-    def __init__(self, team_1, team_2, stage):
+    def __init__(self, team_1, team_2, stage, winner = None, score_1 = -1, score_2 = -1):
         self.teams = [team_1, team_2]
         if (team_1.log_odds >= team_2.log_odds):
             self.teams = [team_2, team_1]
 
         self._score = None
         self._raw_score = None
-        self._winner = None
+        self._winner = winner
         self.stage = stage
+
+        if score_1 >= 0:
+            self._raw_score = [score_1, score_2]
+            self._score = [score_1, score_2]
+            if (team_1.log_odds >= team_2.log_odds):
+                self._raw_score = [score_2, score_1]
+                self._score = [score_2, score_1]
 
     def __str__(self):
         # return "%10s: %d %10s: %d   Winner: %-10s (%.2f %.2f %.2f; %.2f %.2f)" % (
@@ -24,10 +31,14 @@ class Game():
         #     self._score[0], self._score[1]
         # )
 
+        winner_str = "TIE"
+        if self.winner is not None:
+            winner_str = self.winner.name
+
         return "%10s: %d %10s: %d   Winner: %-10s" % (
             self.teams[0].name, self.score[0], 
             self.teams[1].name, self.score[1], 
-            self.winner.name
+            winner_str
         )
 
     @property
@@ -81,7 +92,9 @@ class Game():
 
         score = self.score
         win = self.winner == team
-        pk = self.score[0] == self.score[1]
+        if self.winner is None:
+            win = None
+        pk = (self.score[0] == self.score[1]) and self.winner is not None
         if team == self.teams[0]:
             return (win, pk, self.points(team), self.score[0], self.score[1], self.teams[1])
         if team == self.teams[1]:

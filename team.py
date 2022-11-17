@@ -63,11 +63,11 @@ class Team():
         if Team.id_list is None or Team.abbr_dict is None:
             Team.init_class()
 
-        abbr = team_name_convert(name)
-        if abbr is None:
-            return None
+        # abbr = team_name_convert(name)
+        # if abbr is None:
+        #     return None
 
-        return Team.abbr_dict[abbr]
+        return Team.abbr_dict[name]
 
     @staticmethod
     def group(group):
@@ -105,7 +105,7 @@ class Team():
 
         rows = [
             ( 0, "Italy", "A", 1200),
-            ( 1, "SLand", "A", 7000),
+            ( 1, "SwLand", "A", 7000),
             ( 2, "Turkey", "A", 5000),
             ( 3, "Wales", "A", 10000),
             ( 4, "Belgium", "B", 600),
@@ -115,10 +115,10 @@ class Team():
             ( 8, "Ukraine", "C", 10000),
             ( 9, "NLands", "C", 1100),
             (10, "Austria", "C", 10000),
-            (11, "NMac", "C", 50000),
+            (11, "NorthMac", "C", 50000),
             (12, "England", "D", 550),
             (13, "Croatia", "D", 4000),
-            (14, "CRep", "D", 15000),
+            (14, "CzecRep", "D", 15000),
             (15, "Scotland", "D", 30000),
             (16, "Spain", "E", 900),
             (17, "Poland", "E", 8000),
@@ -140,7 +140,7 @@ class Team():
     def from_id(id):
         if Team.id_list is None or Team.abbr_dict is None:
             Team.init_class()
-        
+
         return Team.id_list[id]
 
     @staticmethod

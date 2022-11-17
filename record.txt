@@ -1,0 +1,71 @@
+RYAN:   36 (2 teams left)
+TJ:     23 (3 teams left)
+COOPER: 22 (2 team left)
+BARDIA: 19 (2 teams left)
+ANDREW: 17 (1 team left)
+MICAH:  17 (1 team left)
+
+
+===  6/11 END   ======
+  RYAN: 39.1%
+COOPER: 20.0%
+BARDIA: 11.8%
+    TJ: 10.4%
+ MICAH:  9.7%
+ANDREW:  9.1%
+
+===  6/12 END   ======
+  RYAN: 40.4%
+ANDREW: 17.7%
+COOPER: 11.4%
+BARDIA: 10.4%
+    TJ: 10.3%
+ MICAH:  9.8%
+
+===  6/13 END   ======
+  RYAN: 43.4%
+ANDREW: 20.6%
+COOPER: 10.7%
+    TJ:  9.4%
+BARDIA:  8.8%
+ MICAH:  7.2%
+
+===  6/14 END   ======
+  RYAN: 52.4%
+    TJ: 17.3%
+ANDREW:  9.1%
+COOPER:  9.1%
+BARDIA:  7.2%
+ MICAH:  4.9%
+
+===  6/15 END   ======
+  RYAN: 51.9%
+    TJ: 17.7%
+ANDREW: 12.9%
+COOPER:  8.8%
+ MICAH:  4.7%
+BARDIA:  4.0%
+
+===  6/16 END   ======
+  RYAN: 79.2%
+    TJ:  9.0%
+ANDREW:  5.9%
+ MICAH:  2.8%
+COOPER:  1.9%
+BARDIA:  1.3%
+
+=== 6/19 END   ======
+  RYAN: 84.2%
+    TJ:  8.2%
+COOPER:  3.1%
+ANDREW:  2.4%
+BARDIA:  1.6%
+ MICAH:  0.5%
+
+=== 6/20 END ===
+  RYAN: 83.7%
+    TJ:  8.2%
+BARDIA:  2.9%
+ANDREW:  2.6%
+COOPER:  2.0%
+ MICAH:  0.6%
