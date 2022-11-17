@@ -20,6 +20,46 @@ def simulate_draft(drafts, teams):
         # print("%s drafting #%d (%s)" % (drafts[i].player, pick_index, draft_teams[pick_index]))
         drafts[i].add_team(draft_teams.pop(pick_index))
 
+def get_draft():
+    drafts = [
+        Draft("Andrew"),
+        Draft("Bardia"),
+        Draft("Cooper"),
+        Draft("Micah"),
+        Draft("Ryan"),
+        Draft("TJ"),
+    ]
+    drafts[0].add_team(Team.from_name("France"))
+    drafts[0].add_team(Team.from_name("USA"))
+    drafts[0].add_team(Team.from_name("Wales"))
+    drafts[0].add_team(Team.from_name("Japan"))
+
+    drafts[1].add_team(Team.from_name("Netherlands"))
+    drafts[1].add_team(Team.from_name("German"))
+    drafts[1].add_team(Team.from_name("Iran"))
+    drafts[1].add_team(Team.from_name("Ghana"))
+
+    drafts[2].add_team(Team.from_name("England"))
+    drafts[2].add_team(Team.from_name("Senegal"))
+    drafts[2].add_team(Team.from_name("Uruguay"))
+    drafts[2].add_team(Team.from_name("Korea"))
+
+    drafts[3].add_team(Team.from_name("Spain"))
+    drafts[3].add_team(Team.from_name("Belgium"))
+    drafts[3].add_team(Team.from_name("Switzerland"))
+    drafts[3].add_team(Team.from_name("Poland"))
+
+    drafts[4].add_team(Team.from_name("Brazil"))
+    drafts[4].add_team(Team.from_name("Denmark"))
+    drafts[4].add_team(Team.from_name("Croatia"))
+    drafts[4].add_team(Team.from_name("Ecuador"))
+
+    drafts[5].add_team(Team.from_name("Argentina"))
+    drafts[5].add_team(Team.from_name("Portugal"))
+    drafts[5].add_team(Team.from_name("Mexico"))
+    drafts[5].add_team(Team.from_name("Canada"))
+    
+
 def simulate_group(group):
     teams = Team.group(group)
 
@@ -114,7 +154,7 @@ if __name__ == "__main__":
     for team in teams:
         super_records[team.name] = SuperRecord(team)
 
-    runs = 100000
+    runs = 1000
     for i in range(runs):
         print("Tournament Simulation: %.2f%%" % (i/runs*100), end='\r')
         all_games = simulate_tournament()
@@ -144,19 +184,20 @@ if __name__ == "__main__":
 
     player_ranks = [[],[],[],[],[],[]]
 
-    draft_runs = 100
+    draft_runs = 1
     for i in range(draft_runs):
         print("Draft Simulation: %.2f%%" % (i/draft_runs*100), end='\r')
-        drafts = [
-            Draft(0),
-            Draft(1),
-            Draft(2),
-            Draft(3),
-            Draft(4),
-            Draft(5)
-        ]
-
-        simulate_draft(drafts, sorted_teams)
+        # drafts = [
+            # Draft(0),
+            # Draft(1),
+            # Draft(2),
+            # Draft(3),
+            # Draft(4),
+            # Draft(5)
+        # ]
+# 
+        # simulate_draft(drafts, sorted_teams)
+        drafts = get_draft()
         for draft in drafts:
             draft.add_records(super_records.values())
 
