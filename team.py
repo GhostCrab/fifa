@@ -67,7 +67,7 @@ class Team():
         # if abbr is None:
         #     return None
 
-        return Team.abbr_dict[name]
+        return Team.abbr_dict[name.upper()]
 
     @staticmethod
     def group(group):
@@ -104,30 +104,38 @@ class Team():
         Team.abbr_dict = {}
 
         rows = [
-            ( 0, "Italy", "A", 1200),
-            ( 1, "SwLand", "A", 7000),
-            ( 2, "Turkey", "A", 5000),
-            ( 3, "Wales", "A", 10000),
-            ( 4, "Belgium", "B", 600),
-            ( 5, "Russia", "B", 10000),
-            ( 6, "Denmark", "B", 2500),
-            ( 7, "Finland", "B", 50000),
-            ( 8, "Ukraine", "C", 10000),
-            ( 9, "NLands", "C", 1100),
-            (10, "Austria", "C", 10000),
-            (11, "NorthMac", "C", 50000),
-            (12, "England", "D", 550),
-            (13, "Croatia", "D", 4000),
-            (14, "CzecRep", "D", 15000),
-            (15, "Scotland", "D", 30000),
-            (16, "Spain", "E", 900),
-            (17, "Poland", "E", 8000),
-            (18, "Sweden", "E", 7500),
-            (19, "Slovakia", "E", 30000),
-            (20, "Germany", "F", 900),
-            (21, "France", "F", 500),
-            (22, "Portugal", "F", 800),
-            (23, "Hungary", "F", 50000)
+            ( 0, "QATAR", "A", 25000),
+            ( 1, "ECUADOR", "A", 15000),
+            ( 2, "SENEGAL", "A", 12500),
+            ( 3, "NETHERLANDS", "A", 1200),
+            ( 4, "ENGLAND", "B", 800),
+            ( 5, "IRAN", "B", 50000),
+            ( 6, "USA", "B", 15000),
+            ( 7, "WALES", "B", 20000),
+            ( 8, "ARGENTINA", "C", 550),
+            ( 9, "SAUDI ARABIA", "C", 75000),
+            (10, "MEXICO", "C", 15000),
+            (11, "POLAND", "C", 15000),
+            (12, "FRANCE", "D", 600),
+            (13, "AUSTRLIA", "D", 35000),
+            (14, "DENMARK", "D", 2800),
+            (15, "TUNISIA", "D", 50000),
+            (16, "SPAIN", "E", 850),
+            (17, "COSTA RICA", "E", 75000),
+            (18, "GERMANY", "E", 1000),
+            (19, "JAPAN", "E", 25000),
+            (20, "BELGIUM", "F", 1600),
+            (21, "CANADA", "F", 20000),
+            (22, "MOROCCO", "F", 20000),
+            (23, "CROATIA", "F", 5000),
+            (24, "BRAZIL", "G", 400),
+            (25, "SERBIA", "G", 8000),
+            (26, "SWITZERLAND", "G", 10000),
+            (27, "CAMEROON", "G", 25000),
+            (28, "PORTUGAL", "H", 1400),
+            (29, "GHANA", "H", 25000),
+            (30, "URUGUAY", "H", 5000),
+            (31, "KOREA", "H", 25000),
         ]
 
         for row in rows:
