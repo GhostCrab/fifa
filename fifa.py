@@ -22,12 +22,18 @@ def simulate_draft(drafts, teams):
 
 def get_draft():
     drafts = [
-        Draft("Andrew"),
-        Draft("Bardia"),
-        Draft("Cooper"),
-        Draft("Micah"),
-        Draft("Ryan"),
-        Draft("TJ"),
+        # Draft("Andrew"),
+        # Draft("Bardia"),
+        # Draft("Cooper"),
+        # Draft("Micah"),
+        # Draft("Ryan"),
+        # Draft("TJ"),
+        Draft(0),
+        Draft(1),
+        Draft(2),
+        Draft(3),
+        Draft(4),
+        Draft(5),
     ]
     drafts[0].add_team(Team.from_name("France"))
     drafts[0].add_team(Team.from_name("USA"))
@@ -35,7 +41,7 @@ def get_draft():
     drafts[0].add_team(Team.from_name("Japan"))
 
     drafts[1].add_team(Team.from_name("Netherlands"))
-    drafts[1].add_team(Team.from_name("German"))
+    drafts[1].add_team(Team.from_name("Germany"))
     drafts[1].add_team(Team.from_name("Iran"))
     drafts[1].add_team(Team.from_name("Ghana"))
 
@@ -58,6 +64,8 @@ def get_draft():
     drafts[5].add_team(Team.from_name("Portugal"))
     drafts[5].add_team(Team.from_name("Mexico"))
     drafts[5].add_team(Team.from_name("Canada"))
+
+    return drafts
     
 
 def simulate_group(group):
